@@ -1,0 +1,31 @@
+<div class="container my-3">
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <div *ngIf="fetchData;else elseblock"  class="text-center mt-4">
+        <div class="spinner-border text-warning" role="status">
+          <span class="sr-only">Fetching Data....</span>
+        </div> Fetching Data....
+      </div>
+      <ng-template #elseblock>
+        <!-- {{details | json}} -->
+          <ul>
+            <li><h3>Name : </h3></li>
+            <p class="lead ml-5">{{details.name}}</p>
+            <li><h3>Technology :</h3></li>
+            <p class="lead ml-5">{{details.technology}}</p>
+            <li><h3>Description :</h3></li>
+            <p class="lead ml-5">{{details.description}}</p>
+            <li><h3>Referances :</h3></li>
+            <p class="lead ml-5">{{details.referances}}</p>
+          </ul>
+        </ng-template>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div *ngIf="!fetchData"  >
+  <app-footer></app-footer>
+</div>

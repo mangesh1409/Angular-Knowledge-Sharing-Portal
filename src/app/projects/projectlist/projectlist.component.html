@@ -1,0 +1,33 @@
+<div class="container my-4">
+  <div class="row">
+    <div class="col-md-4">
+      <button type="button" routerLink="addproject" routerLinkActive="active" class="btn btn-primary m-auto">Add New Project</button>
+    </div>
+    <div class="col-md-4">
+      <h2 class="text-center ">Project List</h2>
+    </div>
+  </div>
+  <div *ngIf="fetchData;else elseblock"  class="text-center mt-4">
+    <div class="spinner-border text-warning" role="status">
+      <span class="sr-only">Fetching Data....</span>
+    </div> Fetching Data....
+  </div>
+  <ng-template #elseblock>
+    <div class="row ">
+        <div class="col-md-4 project my-2 mx-0"  *ngFor="let item of projectCollection">
+          <div class="card" style="width: 18rem;">
+            <!-- <img src="/assets/vfs.png" class="card-img-top" alt="..."> -->
+            <div class="card-body">
+              <h5 class="card-title">{{item.name}}</h5>
+              <p class="card-text">{{item.description.substring(0, 80)}}....</p>
+              <a href="#"  routerLink="projectspec/{{item.id}}" class="btn btn-outline-success">Read More</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </ng-template>
+</div>
+
+<div *ngIf="!fetchData">
+<app-footer></app-footer>
+</div>

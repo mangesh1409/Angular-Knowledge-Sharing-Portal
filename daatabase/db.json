@@ -1,0 +1,132 @@
+{
+  "booksdetails": [
+    {
+      "id": 1,
+      "bname": "Practical Approach in C",
+      "aname": "Ajay Mittal",
+      "price": 580
+    },
+    {
+      "id": 2,
+      "bname": "Linux System Programming",
+      "aname": "Robert Love",
+      "price": 710
+    },
+    {
+      "id": 3,
+      "bname": "Windows Internals",
+      "aname": "Soloman",
+      "price": 1150
+    },
+    {
+      "bname": "Windows Internals ",
+      "aname": "Mark Russinovich",
+      "price": 450,
+      "id": 4
+    },
+    {
+      "bname": "Web Development with Node and Express ",
+      "aname": "Ethan Brown",
+      "price": 569,
+      "id": 5
+    },
+    {
+      "bname": " Learning PHP, MySQL, JavaScript, & CSS: A Step-by-Step Guide to Creating Dynamic Websites",
+      "aname": "Robin Nixon",
+      "price": 940,
+      "id": 7
+    },
+    {
+      "bname": "Computer Networks",
+      "aname": "Ethan Brown",
+      "price": 890,
+      "id": 8
+    },
+    {
+      "bname": "Java Fundamentals",
+      "aname": "Horstmann",
+      "price": 760,
+      "id": 9
+    },
+    {
+      "bname": "The C++ Programming Language",
+      "aname": "Stroustrup Bjarne)",
+      "price": 450,
+      "id": 10
+    }
+  ],
+  "projectDetails": [
+    {
+      "id": 1,
+      "name": "Virtual File System",
+      "technology": "C Programming",
+      "description": "This project provides all functionality to the user which is same as     Linux File system.It provides necessary commands, system calls implementations of file system through customised shell.In this project we implement all necessary data structures of file system like Incore Inode Table, File Table, UAREA, User File Descriptor table.",
+      "referances": "Linux System Programming by Robert Love"
+    },
+    {
+      "id": 2,
+      "name": "ProcMon",
+      "technology": "Windows C Programming",
+      "description": " This project is used to retrieve all internal information of running process one windows platform.This project maintains log file which contains process name , size of process, DLL attached with the process , its threads.This project is used to maintain periodic log for analytical purpose.",
+      "referances": "Windows Internals by Mark Russinovich"
+    },
+    {
+      "id": 3,
+      "name": "Knowledge Sharing Portal",
+      "technology": "Angular 7 for Frontend , Firebase for realtime database",
+      "description": "This application is developed in Angular 7.This project we we provide multiple the functionality by using which any member of University of Company can share there knowledge on our portal.If any user is interested in the information then using our portal they can communicate with each other.For validation purpose we use reactive forms.For Front end designing we use bootstrap and Material designing.To store the data entered by the user we use bootstrap.We deploy our application using S3 of Amazon Web Services.",
+      "referances": "Web Development with Node and Express by Ethan Brown"
+    },
+    {
+      "id": 4,
+      "name": "Naval Mine Detector",
+      "technology": "Deep Learning with Neural network using Python",
+      "description": "Mine detection and classification using side scan sonar imagery is a challenging problem.As opposed to the majority of techniques, several Neural-network-based methods for the detection and classification of mines and mine like objects have been proposed.Detection and classification of underwater objects in sonar imagery is a complicated problem, due to various factors such as variations in operating and environmental conditions, presence of spatially varying clutter, variations in target shapes, compositions and orientation. By using the concept of Deep learning with Neural network we predict whether object is Mine or not",
+      "referances": "Introduction to Machine Learning with Python by Andreas C. Müller and Sarah Guido"
+    },
+    {
+      "id": 5,
+      "name": "Periodic Process Logger",
+      "technology": "Python",
+      "description": "This application us developed in Python.This project automate process log activity.In this project we create log file with the current time and store information about all running processes as its name , PID, memory usage, thread count number of child process. Our automation script executes periodically depends on the time specified by the user using scheduler of python. After periodic execution it sends the log file to the specified email address.",
+      "referances": "How to Think Like a Computer Scientist: Learning with Python 3 Documentation by Peter Wentworth, Jeffrey Elkner"
+    },
+    {
+      "name": "Programmers Forum",
+      "technology": "PHP,Bootstrap,MySql",
+      "description": "From enhancing engagement to making thinking visible and helping build community, discussion forums can have a tremendous impact. Here we create one forum so that people can ask there quries and give anseres for that queries. In that project we create login system.so that people who have account on forum can submit threw anwers.",
+      "referances": " Learning PHP, MySQL, JavaScript, & CSS: A Step-by-Step Guide to Creating Dynamic Websites by Robin Nixon",
+      "id": 6
+    }
+  ],
+  "contactus": [
+    {
+      "id": 1,
+      "name": "Mangesh Jadhav",
+      "email": "149mpj@gmail.com",
+      "phone": 8308505727,
+      "message": "How are you"
+    },
+    {
+      "name": "hkh",
+      "email": "kjkkj@mpj",
+      "phone": 789456120,
+      "message": "hhhkh",
+      "id": 2
+    },
+    {
+      "name": "fff",
+      "email": "ff@e",
+      "phone": 556757,
+      "message": "eweew",
+      "id": 3
+    },
+    {
+      "name": "wwrwr",
+      "email": "rwr@w",
+      "phone": 33,
+      "message": "3fwww",
+      "id": 4
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+.banner{
+  background-image: url("/assets/aboutas.jpg");
+  background-size: cover;
+  /* width: 100%; */
+}
+.banner h1{
+  color: white;
+  padding: 10px;
+  margin: 70px 0;
+}
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+input.ng-valid{
+  border: 2px solid green;
+}
+textarea.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+textarea.ng-valid{
+  border: 2px solid green;
+}

@@ -1,0 +1,6 @@
+export interface Project{
+  name:string;
+  technology:string;
+  description:string;
+  referances:string;
+}

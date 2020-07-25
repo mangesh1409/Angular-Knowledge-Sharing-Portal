@@ -1,0 +1,72 @@
+<div class="container my-5">
+  <div *ngIf="addMessege" class="alert alert-success" role="alert">
+    <b>Success !</b> Your book details has been submitted successfully
+  </div>
+  <div class="row my-3 justify-content-around">
+    <div class="col-md-12">
+      <form (ngSubmit)="sendData(books)" class="form-inline" #books="ngForm">
+          <div class="form-group mx-5">
+            <!-- <label for="">Book Name</label> -->
+            <input type="text" class="form-control" id="" name="bname" placeholder="Book Name" ngModel required minlength="3" #name="ngModel">
+            <small class="text-danger" *ngIf="name.touched && !name.valid">Enter Valid Name</small>
+          </div>
+          <div class="form-group mx-5">
+            <!-- <label for="">Author Name</label> -->
+            <input type="text" class="form-control" id="" name="aname" placeholder="Author Name" ngModel required minlength="3" #aname="ngModel">
+            <small class="text-danger" *ngIf="aname.touched && !aname.valid">Enter Valid Name</small>
+          </div>
+          <div class="form-group mx-5">
+            <!-- <label for="">Price</label> -->
+            <input type="number" class="form-control" id="" name="price" placeholder="Price" ngModel required #ammount="ngModel" pattern="^[1-9]+[0-9]*$">
+            <small class="text-danger" *ngIf="ammount.touched && !ammount.valid">Enter Valid Ammount</small>
+          </div>
+          <button type="submit" [disabled]="books.invalid" class="btn btn-primary  btn">Add Book</button>
+      </form>
+    </div>
+    </div>
+
+  <div class="row my-3"  >
+      <div class="col-md-12">
+          <div *ngIf="deleteMessege" class="alert alert-success" role="alert">
+            <b>Success !</b> One entry has been deleted successfully
+          </div>
+          <h3 class="text-center h2">Books List</h3>
+          <div *ngIf="fetchData;else elseblock"  class="text-center mt-4">
+            <div class="spinner-border text-warning" role="status">
+              <span class="sr-only">Fetching Data....</span>
+            </div> Fetching Data....
+          </div>
+          <ng-template #elseblock>
+            <table  class="table table-hover table-bordered my-2 text-center">
+              <thead>
+                <tr>
+                  <th scope="col">Sr.No.</th>
+                  <th scope="col">Name of Book</th>
+                  <th scope="col">Author Name</th>
+                  <th scope="col">Price</th>
+                  <!-- <th scope="col">Action</th> -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of collection ;let i=index" >
+                  <td>{{i+1}}</td>
+                  <td>{{item.bname}}</td>
+                  <td>{{item.aname}}</td>
+                  <td>{{item.price}}</td>
+                  <!-- <td><button type="button" (click)="getDataToUpdate(item.id,i)"  class="btn btn-success btn-sm mr-2"><i class="fa fa-edit"></i></button>
+                  <button type="button" (click)="deleteEntry(item.id)"  class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></td> -->
+                </tr>
+              </tbody>
+            </table>
+          </ng-template>
+      </div>
+  </div>
+
+</div>
+<!-- </div> -->
+
+
+
+<div class="foot" *ngIf="!fetchData">
+  <app-footer></app-footer>
+</div>

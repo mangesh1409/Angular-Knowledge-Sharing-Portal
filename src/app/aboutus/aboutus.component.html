@@ -1,0 +1,58 @@
+<div class="banner container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Creatively Innovating with Emerging Technology</h1>
+    </div>
+  </div>
+</div>
+
+<div class="container my-3">
+  <div class="row">
+    <div class="col-6">
+      <h3>Who We Are</h3>
+      <p>We are the leading custom web, mobility development company with AI skills. We strive to deliver best of the quality through best of the processes using the best available technologies. Successful and satisfied clients has been the benchmark for us.Our commitment to deliver cost effective, high quality and result-oriented IT solutions to global businesses. We have spearheaded ourselves in providing end-to-end solutions and services in different sections of industry like FinTech, Communication, Retail & Ecommerce, Media & Advertising, Healthcare & Life Science and Transportation. Our goal is to transform businesses, improve performance and we aim to respond more quickly and intuitively to changing market dynamics.
+      </p>
+    </div>
+
+    <div class="col-6">
+      <h3>Contact US</h3>
+      <div *ngIf="addMessege" class="alert alert-success" role="alert">
+        <b>Success !</b> Your query has been submitted successfully
+      </div>
+        <form #contact="ngForm">
+          <div class="form-group my-2">
+            <label for="">Name<span class="text-danger">*</span></label>
+            <input type="text" class="form-control" name="name" ngModel required minlength="3" #name="ngModel">
+            <small class="text-danger" *ngIf="name.touched && !name.valid">Enter Valid Name</small>
+          </div>
+          <div class="form-group">
+            <label for="">Email address<span class="text-danger">*</span></label>
+            <input type="email" class="form-control" name="email" ngModel required email #email="ngModel">
+            <small class="text-danger" *ngIf="email.touched && !email.valid">Enter Valid Email</small>
+          </div>
+          <div class="form-group">
+            <label for="">Mobile Number<span class="text-danger">*</span></label>
+            <input type="number" maxlength="10" class="form-control" name="phone" ngModel required min="10" max="10" #phone="ngModel">
+            <small class="text-danger" *ngIf="phone.touched && !phone.valid">Enter Valid Mobile Number</small>
+          </div>
+          <div class="form-group">
+            <label for="">Message<span class="text-danger">*</span></label>
+            <textarea class="form-control" name="message" ngModel minlength="5" required #message="ngModel"> rows="3"></textarea>
+          </div>
+          <small class="text-danger" *ngIf="message.touched && !message.valid">Enter Valid Message</small>
+          <div class="form-group">
+            <button type="button" [disabled]="contact.invalid" (click)="sendQuery(contact)"  class="btn btn-success">Submit</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <app-footer></app-footer> -->
+<div class="foot">
+  <app-footer></app-footer>
+  </div>
